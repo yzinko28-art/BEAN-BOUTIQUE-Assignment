@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bean Boutique special offers and coffee subscriptions.">
+    <title>Bean Boutique | Offers</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        
+         <div class="header-container">
+
+             <div class="logo">
+                 <i class="fa-solid fa-mug-hot"></i>
+            <span class="text">BEAN</span>
+            <span class="text2">BOUTIQUE</span>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="coffee.html">Coffee</a>
+            <a href="equipment.html">Equipment</a>
+            <a href="events.html">Events</a>
+            <a class="active" href="offers.html">Offers</a>
+            <a class="cart-link" href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                 Cart <span class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+        </header>
+
+<main>
+    <section class="page-hero">
+        <div>
+            <span class="eyebrow">SPECIAL OFFERS</span>
+            <h1>More coffee, less remembering.</h1>
+            <p>Save with seasonal offers or choose a subscription that matches your routine.</p>
+        </div>
+    </section>
+
+<section class="section">
+    <div class="promo-strip">
+        <i class="fa-solid fa-ticket"></i>
+        <div>
+            <strong>Welcome offer: 10% off your first purchase</strong>
+            <span>Use code <b>BEAN10</b> at checkout in this prototype.</span>
+        </div>
+        <button class="btn btn-light" data-open-welcome>Claim Code</button>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-heading centered">
+        <div>
+            <span class="eyebrow">SUBSCRIPTION LEVELS</span>
+            <h2>Pick a plan that fits your cup.</h2>
+        </div>
+        <p>Plans are presented as a front-end prototype; payment and delivery would be connected during back-end development.</p>
+    </div>
+
+<div class="plans">
+    
+<article class="plan">
+    <div class="plan-icon">
+        <i class="fa-solid fa-seedling"></i>
+    </div>
+    <span class="product-type">STARTER</span>
+    <h3>Daily Brew</h3>
+    <p class="plan-price">$14 <small>/ month</small></p>
+    <p>A monthly 250g bag of our current house blend.</p>
+    <ul>
+        <li>1 x 250g coffee</li>
+        <li>Free tasting notes</li>
+        <li>Pause anytime</li>
+    </ul>
+    <button class="btn btn-outline subscribe-btn" data-plan="Daily Brew">Choose Plan</button>
+</article>
+<article class="plan ">
+    <span class="plan-tag">MOST POPULAR</span>
+    <div class="plan-icon">
+        <i class="fa-solid fa-mug-hot"></i>
+    </div>
+    <span class="product-type">REGULAR</span>
+    <h3>Weekend Ritual</h3>
+    <p class="plan-price">$27 <small>/ month</small></p>
+    <p>Two 250g bags selected for variety and weekend brewing.</p>
+    <ul>
+        <li>2 x 250g coffee</li>
+        <li>Origin notes</li>
+        <li>10% equipment discount</li>
+    </ul>
+    <button class="btn btn-outline subscribe-btn" data-plan="Weekend Ritual">Choose Plan</button>
+</article>
+
+<article class="plan">
+    <div class="plan-icon">
+        <i class="fa-solid fa-crown"></i>
+    </div>
+    <span class="product-type">EXPLORER</span>
+    <h3>Roaster's Table</h3>
+    <p class="plan-price">$39 <small>/ month</small></p>
+    <p>Three rotating coffees with early access to limited releases.</p>
+    <ul>
+        <li>3 x 250g coffee</li>
+        <li>Roaster notes</li>
+        <li>Event priority access</li>
+    </ul>
+    <button class="btn btn-outline subscribe-btn" data-plan="Roaster's Table">Choose Plan</button>
+</article>
+
+</div>
+</section>
+
+<section class="section faq-section">
+    <div>
+        <span class="eyebrow">HOW IT WORKS</span>
+        <h2>Simple from start to sip.</h2>
+    </div>
+    <div class="faq-list">
+        <details open>
+            <summary>Can I change my subscription?</summary>
+            <p>In a full system, customers would manage their plan through an account area. This prototype demonstrates the front-end selection only.</p>
+        </details>
+        <details>
+            <summary>How are coffees selected?</summary>
+            <p>The concept uses seasonal house blends and rotating single origins so subscribers can discover different flavour profiles.</p>
+        </details>
+        <details>
+            <summary>Can I cancel?</summary>
+            <p>The final e-commerce implementation would provide a customer account and subscription controls. This prototype does not process payments.</p>
+        </details>
+    </div>
+</section>
+</main>
+<footer class="site-footer">
+    <div class="footer-grid"><div>
+        <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark"><i class="fa-solid fa-mug-hot"></i></span>
+            <span>BEAN <b>BOUTIQUE</b></span>
+        </a>
+        <p>Specialty coffee, practical equipment and community-led workshops.</p>
+    </div>
+    <div>
+        <h4>Explore</h4>
+        <a href="coffee.html">Coffee Selection</a>
+        <a href="equipment.html">Brewing Equipment</a>
+        <a href="events.html">Events</a>
+    </div>
+    <div>
+        <h4>Help</h4>
+        <a href="offers.html">Offers & Subscriptions</a>
+        <a href="cart.html">Shopping Cart</a>
+    </div>
+    <div>
+        <h4>Follow</h4>
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom">
+    <span>© 2026 Bean Boutique Coffee Shop</span>
+    <span>Prototype for Front End Web Development</span>
+</div>
+</footer>
+
+<div class="modal" id="welcomeModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal>
+
+    </div>
+    <div class="modal-card"><button class="modal-close" data-close-modal aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="modal-icon">
+        <i class="fa-solid fa-gift"></i>
+    </div><span class="eyebrow">WELCOME TO BEAN BOUTIQUE</span>
+    <h2>Take 10% off your first order.</h2>
+    <p>Enter your email to receive a welcome code.</p>
+    <form id="welcomeForm">
+        <label for="welcomeEmail">Email address</label>
+        <input id="welcomeEmail" type="email" required placeholder="you@example.com">
+        <button class="btn btn-primary" type="submit">Send My Code</button>
+    </form>
+    <div class="success-box" id="welcomeSuccess" hidden>
+        <i class="fa-solid fa-circle-check"></i>
+        <div>
+            <strong>Thank you!</strong>
+            <span>Your discount code is <b>BEAN10</b>.</span>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js">
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script src="js/app.js">
+
+</script>
+</body>
+</html>

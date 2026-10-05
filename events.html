@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bean Boutique coffee events and workshop registration.">
+    <title>Bean Boutique | Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+   <div class="header-container">
+
+       <div class="logo">
+           <i class="fa-solid fa-mug-hot"></i>
+           <span class="text">BEAN</span>
+           <span class="text2">BOUTIQUE</span>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="coffee.html">Coffee</a>
+            <a href="equipment.html">Equipment</a>
+            <a class="active" href="events.html">Events</a>
+            <a href="offers.html">Offers</a>
+            <a class="cart-link" href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart <span class="cart-count">0</span>
+            </a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="page-hero">
+        <div>
+            <span class="eyebrow">EVENTS & WORKSHOPS</span>
+            <h1>Learn, taste and brew together.</h1>
+            <p>Small-group sessions for curious coffee drinkers. Choose a workshop and register online.</p>
+        </div>
+    </section>
+<section class="section">
+    <div class="event-list">
+<article class="event-card">
+    <div class="event-date"><b>18</b>
+        <span>OCT</span>
+    </div>
+    <div class="event-main">
+        <span class="product-type">BEGINNER · 90 MIN</span>
+        <h2>Pour-over Fundamentals</h2>
+        <p>Learn grind size, water temperature, pouring technique and tasting basics.</p>
+        <div class="event-meta">
+            <span>
+                <i class="fa-regular fa-clock"></i>
+                 10:30 AM</span>
+                 <span>
+                    <i class="fa-solid fa-user-group"></i>
+                     8 places</span>
+                     <span>
+                        <i class="fa-solid fa-tag"></i>
+                         $18</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-small" href="#register" data-event="Pour-over Fundamentals">Register</a>
+                </article>
+
+<article class="event-card">
+    <div class="event-date"><b>25</b>
+        <span>OCT</span>
+    </div>
+    <div class="event-main">
+        <span class="product-type">TASTING · 60 MIN</span>
+        <h2>Single-Origin Tasting</h2>
+        <p>Compare three origins and learn how altitude, processing and roast influence flavour.</p>
+        <div class="event-meta">
+            <span>
+                <i class="fa-regular fa-clock"></i>
+                 2:00 PM</span>
+                 <span>
+                    <i class="fa-solid fa-user-group"></i>
+                     10 places</span>
+                     <span>
+                        <i class="fa-solid fa-tag"></i>
+                         $15</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-small" href="#register" data-event="Single-Origin Tasting">Register</a>
+                </article>
+
+<article class="event-card">
+    <div class="event-date"><b>01</b>
+        <span>NOV</span>
+    </div>
+    <div class="event-main"><span class="product-type">COMMUNITY · 75 MIN</span>
+        <h2>Meet the Roaster</h2>
+        <p>Ask questions about roasting, sourcing and how a green bean becomes your daily coffee.</p>
+        <div class="event-meta">
+            <span>
+                <i class="fa-regular fa-clock"></i>
+                 11:00 AM</span>
+                 <span>
+                    <i class="fa-solid fa-user-group"></i>
+                     12 places</span>
+                     <span>
+                        <i class="fa-solid fa-tag"></i>
+                         Free</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-small" href="#register" data-event="Meet the Roaster">Register</a>
+                </article>
+
+</div>
+</section>
+
+<section class="section register-section" id="register">
+    <div class="section-heading"><div>
+        <span class="eyebrow">ONLINE REGISTRATION</span>
+        <h2>Reserve a workshop place.</h2>
+    </div>
+    <p>Complete the form below. In the final implementation, the form can be connected to EmailJS to send the registration to the shop.</p>
+</div>
+
+<form class="form-card" id="eventForm">
+<div class="form-grid"><div>
+    <label for="firstName">First name</label>
+    <input id="firstName" name="firstName" required>
+</div>
+<div>
+    <label for="lastName">Last name</label>
+    <input id="lastName" name="lastName" required>
+</div>
+<div>
+    <label for="eventEmail">Email address</label>
+    <input id="eventEmail" name="email" type="email" required>
+</div>
+<div>
+    <label for="eventSelect">Workshop</label>
+    <select id="eventSelect" name="event" required>
+        <option value="">Select an event</option>
+        <option>Pour-over Fundamentals</option>
+        <option>Single-Origin Tasting</option>
+        <option>Meet the Roaster</option>
+    </select>
+</div>
+<div>
+    <label for="eventDate">Preferred date</label>
+    <input id="eventDate" name="date" class="date-picker" placeholder="Select a date" required></div>
+</div>
+
+<button class="btn btn-primary" type="submit">
+    <i class="fa-solid fa-paper-plane"></i>
+     Submit Registration</button>
+     <p class="form-note">Demo mode: replace the EmailJS public key, service ID and template ID in <code>
+        js/app.js</code>
+         before live submission.</p>
+
+</form>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div>
+            <a class="brand footer-brand" href="index.html">
+                <span class="brand-mark">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </span>
+                <span>BEAN <b>BOUTIQUE</b>
+                </span>
+            </a>
+            <p>Specialty coffee, practical equipment and community-led workshops.</p>
+        </div>
+        <div>
+            <h4>Explore</h4>
+            <a href="coffee.html">Coffee Selection</a>
+            <a href="equipment.html">Brewing Equipment</a>
+            <a href="events.html">Events</a>
+        </div>
+        <div>
+            <h4>Help</h4>
+            <a href="offers.html">Offers & Subscriptions</a>
+            <a href="cart.html">Shopping Cart</a>
+        </div>
+        <div>
+            <h4>Follow</h4>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#"><i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Bean Boutique Coffee Shop</span>
+        <span>Prototype for Front End Web Development</span>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+
+</script>
+<script src="js/app.js">
+
+</script>
+</body>
+</html>
