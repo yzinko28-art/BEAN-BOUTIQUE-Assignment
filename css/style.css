@@ -901,30 +901,276 @@ label{
   font:700 30px "Playfair Display",serif;
 }
 
-.site-footer{background:#041329;color:#c7d9ed;padding:60px 7% 20px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}.footer-brand{color:#fff;margin-bottom:15px}.site-footer p{color:#92abc5;max-width:300px;font-size:13px}.site-footer h4{color:#fff;margin:0 0 13px}.site-footer>div a:not(.brand){display:block;color:#9db4cc;font-size:13px;margin:8px 0}.socials{display:flex;gap:10px}.site-footer .socials a{width:36px;height:36px;border-radius:10px;background:#0d2b50;display:grid;place-items:center;color:#fff}.footer-bottom{border-top:1px solid #1a3555;margin-top:45px;padding-top:18px;display:flex;justify-content:space-between;font-size:11px;color:#7892ad}
-.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:2000}.modal.open{display:flex}.modal-backdrop{position:absolute;inset:0;background:rgba(3,16,35,.7);backdrop-filter:blur(5px)}.modal-card{position:relative;z-index:2;width:min(510px,92%);background:#fff;border-radius:24px;padding:36px;box-shadow:0 30px 80px rgba(0,0,0,.3)}.modal-close{position:absolute;top:14px;left:14px;width:36px;height:36px;border-radius:10px;border:0;background:#eef6fc;color:var(--navy);font-size:17px}.modal-icon{width:60px;height:60px;border-radius:18px;background:var(--sky);color:var(--blue);display:grid;place-items:center;font-size:25px;margin:0 auto 20px}.modal-card{text-align:center}.modal-card form{text-align:left}.modal-card label{margin-top:12px}.modal-card .btn{width:100%;margin-top:12px}.success-box{display:flex;gap:12px;align-items:center;text-align:left;background:#eaf9f1;color:#1f6b47;border:1px solid #b9e8cf;border-radius:13px;padding:14px;margin-top:15px}.success-box i{font-size:25px}.success-box strong,.success-box span{display:block}.detail-modal{text-align:left}.detail-modal h2{font:700 34px "Playfair Display",serif;margin:4px 0 10px}.detail-modal p{color:var(--muted)}.detail-list{padding-left:20px;color:#536980}.detail-highlight{background:var(--ice);border-radius:15px;padding:15px;margin-top:18px}
-.toastify{border-radius:10px!important;font-family:Inter,Arial,sans-serif!important}
-@media(max-width:900px){.main-nav{gap:15px}
-.product-grid,.large-grid,.plans{
-  grid-template-columns:repeat(2,1fr)
-}
-.feature-grid{
-  grid-template-columns:1fr
-}
-.split-section,.faq-section,.cart-layout{
-  grid-template-columns:1fr
-}
-.equipment-grid{
-  grid-template-columns:1fr
+.site-footer{
+  background:#041329;
+  color:#c7d9ed;
+  padding:60px 7% 20px
 }
 .footer-grid{
-  grid-template-columns:1fr 1fr
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+}
+.footer-brand{
+  color:#fff;
+  margin-bottom:15px;
+}
+.site-footer p{
+  color:#92abc5;
+  max-width:300px;
+  font-size:13px;
+}
+.site-footer h4{
+  color:#fff;
+  margin:0 0 13px;
+}
+.site-footer>div a:not(.brand){
+  display:block;
+  color:#9db4cc;
+  font-size:13px;
+  margin:8px 0;
+}
+.socials{
+  display:flex;
+  gap:10px;
+}
+.site-footer .socials a{
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  background:var(--text);
+  display:grid;
+  place-items:center;
+  color:var(--sky);
+}
+.footer-bottom{
+  border-top:1px solid var(--text);
+
+  margin-top:45px;
+  padding-top:18px;
+  display:flex;
+  justify-content:space-between;
+  font-size:11px;
+  color:#7892ad;
+}
+
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+}
+.modal.open{
+  display:flex;
+}
+.modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(3,16,35,.7);
+  backdrop-filter:blur(5px);
+}
+.modal-card{
+  position:relative;
+  z-index:2;
+  width:min(510px,92%);
+  background:var(--sky);
+  border-radius:24px;
+  padding:36px;
+  box-shadow:0 30px 80px rgba(0,0,0,.3);
+}
+.modal-close{
+  position:absolute;
+  top:14px;
+  left:14px;
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  border:0;
+  background:#eef6fc;
+  color:var(--navy);
+  font-size:17px;
+}
+.modal-icon{
+  width:60px;
+  height:60px;
+  border-radius:18px;
+  background:var(--sky);
+  color:var(--blue);
+  display:grid;
+  place-items:center;
+  font-size:25px;
+  margin:0 auto 20px;
+}
+.modal-card{
+  text-align:center;
+}
+.modal-card form{
+  text-align:left;
+}
+.modal-card label{
+  margin-top:12px;
+}
+.modal-card .btn{
+  width:100%;
+  margin-top:12px;
+}
+.success-box{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  text-align:left;
+  background:var(--sky);
+  color:#1f6b47;
+  border:1px solid #b9e8cf;
+  border-radius:13px;
+  padding:14px;margin-top:15px;
+}
+.success-box i{
+  font-size:25px;
+}
+.success-box strong,.success-box span{
+  display:block;
+}
+.detail-modal{
+  text-align:left;
+}
+.detail-modal h2{
+  font:700 34px "Playfair Display",serif;
+  margin:4px 0 10px;
+}
+.detail-modal p{
+  color:var(--muted);
+}
+.detail-list{
+  padding-left:20px;
+  color:#536980;
+}
+.detail-highlight{
+  background:var(--ice);
+  border-radius:15px;
+  padding:15px;
+  margin-top:18px;
+}
+.toastify{
+  border-radius:10px;
+  font-family:Inter,Arial,sans-serif;
+}
+@media(max-width:900px){
+  .main-nav{gap:15px}
+.product-grid,.large-grid,.plans{
+  grid-template-columns:repeat(2,1fr);
+}
+.feature-grid{
+  grid-template-columns:1fr;
+}
+.split-section,.faq-section,.cart-layout{
+  grid-template-columns:1fr;
+}
+.equipment-grid{
+  grid-template-columns:1fr;
+}
+.footer-grid{
+  grid-template-columns:1fr 1fr;
 }
 .cart-summary{
-  position:static
+  position:static;
 }
 .hero-swiper{
-  height:590px
+  height:590px;
 }
 }
-@media(max-width:700px){.site-header{height:68px;padding:0 5%}.menu-toggle{display:block}.main-nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:10px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;box-shadow:var(--shadow)}.main-nav.open{display:flex}.main-nav>a{padding:12px 0}.main-nav>a.active:after,.main-nav>a:hover:after{display:none}.brand{font-size:13px}.hero-swiper{height:560px}.hero-slide{padding:12% 7%}.section,.page-hero{padding:65px 5%}.product-grid,.large-grid,.plans,.form-grid{grid-template-columns:1fr}.catalogue-tools{flex-direction:column}.catalogue-tools select{max-width:none}.event-card{grid-template-columns:70px 1fr}.event-card>.btn{grid-column:2}.equipment-card{grid-template-columns:1fr}.equipment-icon{width:75px;height:75px}.offer-banner,.section-heading{flex-direction:column;align-items:flex-start}.footer-grid{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column;gap:5px}.cart-row{grid-template-columns:60px 1fr}.cart-row>.row-total{grid-column:2}.cart-row .remove-item{position:absolute;margin-left:45%}.modal-card{padding:32px 22px}.modal-close{left:10px}}
+@media(max-width:700px){
+  .site-header{
+    height:68px;
+    padding:0 5%;
+  }
+  .menu-toggle{
+    display:block;
+  }
+  .main-nav{
+    display:none;
+    position:absolute;
+    top:68px;
+    left:0;
+    right:0;
+    background:var(--sky);
+    padding:10px 5%;
+    border-bottom:1px solid var(--line);
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;box-shadow:var(--shadow);
+  }
+  .main-nav.open{
+    display:flex;
+  }
+  .main-nav>a{
+    padding:12px 0;
+  }
+  .main-nav>a.active:after,.main-nav>a:hover:after{
+    display:none;
+  }
+  .brand{
+    font-size:13px;
+  }
+  .hero-swiper{
+    height:560px;
+  }
+  .hero-slide{
+    padding:12% 7%;
+  }
+  .section,.page-hero{
+    padding:65px 5%;
+  }
+  .product-grid,.large-grid,.plans,.form-grid{
+    grid-template-columns:1fr;
+  }
+  .catalogue-tools{
+    flex-direction:column;
+  }
+  .catalogue-tools select{
+    max-width:none;
+  }
+  .event-card{
+    grid-template-columns:70px 1fr;
+  }
+  .event-card>.btn{
+    grid-column:2;
+  }
+  .equipment-card{
+    grid-template-columns:1fr;
+  }
+  .equipment-icon{
+    width:75px;
+    height:75px
+  }
+  .offer-banner,.section-heading{
+    flex-direction:column;
+    align-items:flex-start
+  }
+  .footer-grid{
+    grid-template-columns:1fr 1fr
+  }
+  .footer-bottom{
+    flex-direction:column;
+    gap:5px
+  }
+  .cart-row{
+    grid-template-columns:60px 1fr
+  }
+  .cart-row>.row-total{
+    grid-column:2
+  }
+  .cart-row .remove-item{
+    position:absolute;
+    margin-left:45%
+  }
+  .modal-card{
+    padding:32px 22px
+  }
+  .modal-close{
+    left:10px
+  }
+}
+
