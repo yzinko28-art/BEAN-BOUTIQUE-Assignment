@@ -21,13 +21,18 @@
       <span class="text">BEAN</span>
             <span class="text2">BOUTIQUE</span>
         </div>
+
+<button class="menu-toggle" id="menuToggle">
+  <i class="fa-solid fa-bars"></i>
+</button>
+
   <nav class="main-nav" aria-label="Main navigation">
     <a class="active" href="index.html">Home</a>
     <a href="coffee.html">Coffee</a>
     <a href="equipment.html">Equipment</a>
     <a href="events.html">Events</a>
     <a href="offers.html">Offers</a>
-    <a class="cart-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-count">0</span></a>
+    <a class="cart-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-count">0</span></a>
   </nav>
 </div>
 </header>
@@ -127,9 +132,10 @@
         <p>Jasmine, citrus and honey with a clean finish.</p>
         <div class="product-bottom">
           <strong>$16.00</strong>
-          <button class="icon-btn add-to-cart" data-id="ethiopian" aria-label="Add Ethiopian Yirgacheffe to cart">
-            <i class="fa-solid fa-plus"></i>
+          <button class="btn btn-small add-to-cart" data-id="ethiopian" aria-label="Add Ethiopian Yirgacheffe to cart">
+     Add to Cart
           </button>
+          <button class="detail-btn" data-detail="ethiopian">View Detail</button>
         </div>
       </div>
     </article>
@@ -147,9 +153,10 @@
         <p>Cocoa, toasted almond and brown sugar.</p>
         <div class="product-bottom">
           <strong>$14.00</strong>
-          <button class="icon-btn add-to-cart" data-id="midnight" aria-label="Add Midnight House to cart">
-            <i class="fa-solid fa-plus"></i>
+          <button class="btn btn-small add-to-cart" data-id="midnight" aria-label="Add Midnight House to cart">
+            Add to Cart
           </button>
+          <button class="detail-btn" data-detail="midnight">View Detail</button>
         </div>
       </div>
 
@@ -168,16 +175,85 @@
         <p>Red apple, caramel and soft cocoa.</p>
         <div class="product-bottom">
           <strong>$15.00</strong>
-          <button class="icon-btn add-to-cart" data-id="colombia" aria-label="Add Colombia Huila to cart">
-            <i class="fa-solid fa-plus"></i>
+          <button class="btn btn-small add-to-cart" data-id="colombia" aria-label="Add Colombia Huila to cart">
+         Add to Cart
           </button>
+          <button class="detail-btn" data-detail="colombia">View Detail</button>
         </div>
       </div>
 
     </article>
 
+    <article class="product-card" data-product-id="colombia">
+
+      <div class="product-image coffee-img coffee-colombia">
+       
+        <img src="./image/Compact Espresso Machine.webp" alt="Compact Espresso Machine">
+      </div>
+
+      <div class="product-info">
+        <span class="product-type">ESPRESSO</span>
+        <h3>Compact Espresso Machine</h3>
+        <p>Beginner-friendly countertop machine with steam wand for milk drinks.</p>
+        <div class="product-bottom">
+          <strong>$189.00</strong>
+          <button class="btn btn-small add-to-cart" data-id="colombia" aria-label="Add Colombia Huila to cart">
+         Add to Cart
+          </button>
+          <button class="detail-btn" data-detail="espresso">View Detail</button>
+        </div>
+      </div>
+
+    </article>
+
+    <article class="product-card" data-product-id="ethiopian">
+
+      <div class="product-image coffee-img coffee-ethiopian">
+       
+        <img src="./image/Digital Coffee Scale.webp" alt="Digital Coffee Scale">
+      </div>
+
+      <div class="product-info">
+        <span class="product-type">MEASUREMENT
+</span>
+        <h3>Digital Coffee Scale</h3>
+        <p>Compact timer scale for repeatable coffee-to-water ratios and extraction timing.</p>
+        <div class="product-bottom">
+          <strong>$31.00</strong>
+          <button class="btn btn-small add-to-cart" data-id="ethiopian" aria-label="Add Ethiopian Yirgacheffe to cart">
+     Add to Cart
+          </button>
+          <button class="detail-btn" data-detail="scale">View Detail</button>
+        </div>
+      </div>
+    </article>
+
+    
+    <article class="product-card" data-product-id="midnight">
+      
+      <div class="product-image coffee-img coffee-midnight">
+        
+        <img src="./image/Glass Pour-over Set.webp" alt="Glass Pour-over Set">
+      </div>
+
+      <div class="product-info">
+        <span class="product-type">FILTER BREWING</span>
+        <h3>Glass Pour-over Set</h3>
+        <p>Heat-resistant glass dripper with matching server for clean, bright cups.</p>
+        <div class="product-bottom">
+          <strong>$28.00</strong>
+          <button class="btn btn-small add-to-cart" data-id="midnight" aria-label="Add Midnight House to cart">
+            Add to Cart
+          </button>
+          <button class="detail-btn" data-detail="pourover">View Detail</button>
+        </div>
+      </div>
+      
+    </article>
   </div>
-</section>
+  </section>
+
+    
 
 <section class="section offer-banner">
   <div><span class="eyebrow">COFFEE SUBSCRIPTIONS</span><h2>Your favourite roast, delivered.</h2><p>Choose a simple monthly plan and keep your cupboard ready for the next brew.</p></div>
@@ -192,13 +268,59 @@
 
 <footer class="site-footer">
   <div class="footer-grid">
-    <div><a class="brand footer-brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-mug-hot"></i></span><span>BEAN <b>BOUTIQUE</b></span></a><p>Specialty coffee, practical equipment and community-led workshops.</p></div>
-    <div><h4>Explore</h4><a href="coffee.html">Coffee Selection</a><a href="equipment.html">Brewing Equipment</a><a href="events.html">Events</a></div>
-    <div><h4>Help</h4><a href="offers.html">Offers & Subscriptions</a><a href="cart.html">Shopping Cart</a><a href="events.html#register">Registration</a></div>
-    <div><h4>Follow</h4><div class="socials"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></div></div>
+    <div>
+      <a class="brand footer-brand" href="index.html">
+        <span class="brand-mark">
+          <i class="fa-solid fa-mug-hot"></i>
+        </span>
+        <span>BEAN <b>BOUTIQUE</b></span>
+      </a>
+      <p>Specialty coffee, practical equipment and community-led workshops.</p>
+    </div>
+      <div class="footer-link">
+        <h4>Explore</h4>
+        <a href="coffee.html">Coffee Selection</a>
+        <a href="equipment.html">Brewing Equipment</a>
+        <a href="events.html">Events</a>
+    </div>
+    <div footer-link>
+        <h4>Help</h4>
+        <a href="offers.html">Offers & Subscriptions</a>
+        <a href="cart.html">Shopping Cart</a>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
   </div>
   <div class="footer-bottom"><span>© 2026 Bean Boutique Coffee Shop</span><span>Prototype for Front End Web Development</span></div>
 </footer>
+
+<div class="modal" id="detailModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-card">
+        <button class="modal-close" data-close-modal>
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div id="detailContent"></div>
+    </div>
+</div>
+
+
+
+
 
 <div class="modal" id="welcomeModal" aria-hidden="true">
   <div class="modal-backdrop" data-close-modal></div>
@@ -216,5 +338,8 @@
 <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <script src="js/app.js"></script>
+
+
+
 </body>
 </html>

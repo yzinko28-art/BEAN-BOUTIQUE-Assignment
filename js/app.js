@@ -1,6 +1,10 @@
 
 const PRODUCTS = {
-  ethiopian:{name:"Ethiopian Yirgacheffe",price:16,type:"Single Origin",description:"A bright, clean coffee with jasmine aroma, citrus acidity and a honey-like sweetness.",brew:"Pour-over or AeroPress",details:["Light roast profile","Tasting notes: jasmine, citrus, honey","Recommended water: 90–94°C","Best for filter-style brewing"]},
+  ethiopian:{
+    name:"Ethiopian Yirgacheffe",
+    price:16,
+    type:"Single Origin",
+    description:"A bright, clean coffee with jasmine aroma, citrus acidity and a honey-like sweetness.",brew:"Pour-over or AeroPress",details:["Light roast profile","Tasting notes: jasmine, citrus, honey","Recommended water: 90–94°C","Best for filter-style brewing"]},
   midnight:{name:"Midnight House",price:14,type:"House Blend",description:"A full-bodied dark roast built around cocoa, toasted almond and brown sugar.",brew:"Espresso or French press",details:["Dark roast profile","Tasting notes: cocoa, almond, brown sugar","Rich body with a long finish","Works well with milk"]},
   colombia:{name:"Colombia Huila",price:15,type:"Single Origin",description:"A balanced Colombian coffee with red apple sweetness, caramel and soft cocoa.",brew:"Filter or French press",details:["Medium roast profile","Tasting notes: red apple, caramel, cocoa","Balanced acidity","Suitable for everyday brewing"]},
   guatemala:{name:"Guatemala Huehuetenango",price:17,type:"Single Origin",description:"Silky and aromatic with plum, dark chocolate and hazelnut notes.",brew:"Pour-over",details:["Medium roast profile","Tasting notes: plum, dark chocolate, hazelnut","Silky mouthfeel","Pairs well with pastries"]},
@@ -11,8 +15,71 @@ const PRODUCTS = {
   kettle:{name:"Gooseneck Kettle",price:42,type:"Brewing Equipment",description:"A controlled-pour kettle for consistent flow and repeatable pour-over recipes.",brew:"Pour-over",details:["Gooseneck spout","Precision pouring","Use with a thermometer or scale","Clean and dry after use"]},
   scale:{name:"Digital Coffee Scale",price:31,type:"Brewing Equipment",description:"A compact timer scale for repeatable coffee-to-water ratios.",brew:"All brew methods",details:["Built-in timer concept","Tare function","Helps repeat recipes","Compact countertop design"]},
   grinder:{name:"Hand Burr Grinder",price:55,type:"Brewing Equipment",description:"An adjustable burr grinder for fresh grinding at home or while travelling.",brew:"All brew methods",details:["Adjustable grind size","Manual operation","Fresh grinding before brewing","Brush loose grounds regularly"]},
-  espresso:{name:"Compact Espresso Machine",price:189,type:"Brewing Equipment",description:"A beginner-friendly countertop espresso machine with a steam wand for milk drinks.",brew:"Espresso",details:["Compact countertop design","Steam wand","Fine espresso grind recommended","Clean group head after use"]}
+  espresso:{name:"Compact Espresso Machine",price:189,type:"Brewing Equipment",description:"A beginner-friendly countertop espresso machine with a steam wand for milk drinks.",brew:"Espresso",details:["Compact countertop design","Steam wand","Fine espresso grind recommended","Clean group head after use"]},
+  espresso: {
+    name: "Espresso",
+    price: 15.00,
+    type: "Espresso Coffee",
+    description: "A bold and concentrated coffee with a rich aroma, smooth crema and a strong, intense flavour.",
+    
+    details: [
+        "Ingredients: Finely ground coffee beans and hot water",
+        "Taste: Bold, rich and slightly bitter",
+        "Roast Level: Medium to Dark",
+        "Serving Size: 30ml single shot",
+        "Allergen Information: No common allergens in the basic recipe",
+        "Recommended Pairing: Biscotti or dark chocolate"
+    ],
+    brew: "Espresso Machine",
+    tastingNotes: ["Rich", "Bold", "Intense"]
+},
+latte: {
+    name: "Latte",
+    price: 17.00,
+    type: "Milk Coffee",
+    description: "A smooth and creamy coffee made with espresso and steamed milk.",
+    brew: "Espresso machine",
+    details: [
+        "Ingredients: Espresso, steamed milk and milk foam",
+        "Taste: Creamy, smooth and mildly sweet",
+        "Serving size: 250ml",
+        "Contains milk",
+        "Pairs well with croissants or butter cookies"
+    ]
+},
+
+cappuccino: {
+    name: "Cappuccino",
+    price: 19.00,
+    type: "Espresso Coffee",
+    description: "A balanced coffee with espresso, steamed milk and milk foam.",
+    brew: "Espresso machine",
+    details: [
+        "Ingredients: Espresso, steamed milk and milk foam",
+        "Taste: Rich, creamy and balanced",
+        "Serving size: 180ml",
+        "Contains milk",
+        "Pairs well with chocolate cake or biscotti"
+    ]
+},
+
+mocha: {
+    name: "Mocha",
+    price: 5.50,
+    type: "Chocolate Coffee",
+    description: "A delicious coffee combining espresso, chocolate and steamed milk.",
+    brew: "Espresso machine",
+    details: [
+        "Ingredients: Espresso, chocolate sauce and steamed milk",
+        "Taste: Rich chocolate flavour with coffee bitterness",
+        "Serving size: 250ml",
+        "Contains milk; chocolate ingredients may contain other allergens",
+        "Pairs well with brownies or chocolate cookies"
+    ]
+}
 };
+
+
 
 const toast = (message, type="info") => {
   if (typeof Toastify !== "undefined") {
@@ -69,8 +136,7 @@ function renderCart(){
     <button class="remove-item" data-id="${item.id}" aria-label="Remove ${p.name}">
     <i class="fa-solid fa-trash"></i>
     </button>
-    </div>
-    </article>`;
+    </div></article>`;
   }).join("");
   box.querySelectorAll(".qty-plus").forEach(b=>b.onclick=()=>changeQty(b.dataset.id,1));
   box.querySelectorAll(".qty-minus").forEach(b=>b.onclick=()=>changeQty(b.dataset.id,-1));
@@ -101,6 +167,23 @@ document.addEventListener("DOMContentLoaded",()=>{
   document.querySelectorAll("[data-open-welcome]").forEach(btn=>btn.addEventListener("click",()=>openModal("welcomeModal")));
   document.querySelectorAll("[data-close-modal]").forEach(btn=>btn.addEventListener("click",()=>closeModal(btn.closest(".modal"))));
 
+const welcomeModal = document.getElementById("welcomeModal");
+
+if (welcomeModal) {
+    const hasSeenPopup = localStorage.getItem("beanWelcomeSeen");
+
+    if (!hasSeenPopup) {
+        setTimeout(() => {
+            openModal("welcomeModal");
+            localStorage.setItem("beanWelcomeSeen", "true");
+        }, 1000);
+    }
+}
+
+// localStorage.removeItem("beanWelcomeSeen");
+// location.reload();
+
+
   const welcomeForm=document.getElementById("welcomeForm");
   if(welcomeForm)welcomeForm.addEventListener("submit",e=>{
     e.preventDefault();
@@ -124,12 +207,59 @@ document.addEventListener("DOMContentLoaded",()=>{
     search.addEventListener("input",runFilter);filter.addEventListener("change",runFilter);
   }
 
-  document.querySelectorAll(".detail-btn").forEach(btn=>btn.addEventListener("click",()=>{
-    const p=PRODUCTS[btn.dataset.detail]; if(!p)return;
-    document.getElementById("detailContent").innerHTML=`<span class="eyebrow">${p.type}</span><h2>${p.name}</h2><p>${p.description}</p><div class="detail-highlight"><strong>Recommended brewing method:</strong><br>${p.brew}</div><h3>Product details</h3><ul class="detail-list">${p.details.map(x=>`<li>${x}</li>`).join("")}</ul><div class="product-bottom"><strong>$${p.price.toFixed(2)}</strong><button class="btn btn-primary add-detail-cart" data-id="${btn.dataset.detail}">Add to Cart</button></div>`;
-    document.querySelector(".add-detail-cart").onclick=()=>{addToCart(btn.dataset.detail);closeModal(document.getElementById("detailModal"));};
-    openModal("detailModal");
-  }));
+document.querySelectorAll(".detail-btn").forEach(function(btn)  {
+    btn.addEventListener("click", function () {
+        const id = btn.getAttribute("data-detail");
+        const p = PRODUCTS[id];
+
+        if (!p) {
+            toast("Product details are unavailable.");
+            return;
+        }
+
+        const detailContent = document.getElementById("detailContent");
+        const detailModal = document.getElementById("detailModal");
+
+        if (!detailContent || !detailModal) {
+            toast("Detail modal  is missing from this page.");
+            return;
+        }
+
+        detailContent.innerHTML = `
+            <span class="eyebrow">${p.type}</span>
+            <h2>${p.name}</h2>
+            <p>${p.description}</p>
+
+            <div class="detail-highlight">
+                <strong>Recommended brewing method:</strong>
+                <br></p>${p.brew}<p>
+            </div>
+
+            <h3>Product details</h3>
+            <ul class="detail-list">
+                ${p.details.map(function (item){
+                  return `<li>${item}</li>`;
+                } ).join("")}
+            </ul>
+
+            <div class="product-bottom">
+                <strong>$${p.price.toFixed(2)}</strong>
+                <button class="btn btn-primary add-detail-cart">
+                    Add to Cart
+                </button>
+            </div>
+        `;
+
+        const addButton = detailContent.querySelector(".add-detail-cart");
+
+       addButton.onclick = function (){
+        addToCart(id);
+        closeModal(detailModal);
+       };
+
+        openModal("detailModal");
+    });
+});
 
   if(typeof flatpickr!=="undefined")document.querySelectorAll(".date-picker").forEach(input=>flatpickr(input,{dateFormat:"Y-m-d",minDate:"today"}));
 
@@ -148,10 +278,10 @@ document.addEventListener("DOMContentLoaded",()=>{
       try{await emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_ID,Object.fromEntries(formData));toast("Registration sent successfully.","success");eventForm.reset();return;}catch(err){toast("Email service failed. Demo registration saved locally.");}
     }
     localStorage.setItem("lastEventRegistration",JSON.stringify(Object.fromEntries(formData)));
-    toast("Registration submitted in demo mode.","success");eventForm.reset();
+    toast("Registration submitted in done mode.","success");eventForm.reset();
   });
 
-  document.querySelectorAll(".subscribe-btn").forEach(btn=>btn.addEventListener("click",()=>toast(`${btn.dataset.plan} selected. Checkout is disabled in this prototype.`,"success")));
+  document.querySelectorAll(".subscribe-btn").forEach(btn=>btn.addEventListener("click",()=>toast(`${btn.dataset.plan} selected. ("Your plan has been selected successfully!")`,"success")));
 
   const coupon=document.getElementById("applyCoupon");
   if(coupon)coupon.addEventListener("click",()=>{

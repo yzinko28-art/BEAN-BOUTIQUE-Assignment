@@ -21,6 +21,12 @@
            <span class="text">BEAN</span>
            <span class="text2">BOUTIQUE</span>
         </div>
+
+        <button class="menu-toggle" id="menuToggle">
+  <i class="fa-solid fa-bars"></i>
+</button>
+
+
         <nav class="main-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="coffee.html">Coffee</a>
@@ -29,7 +35,7 @@
             <a href="offers.html">Offers</a>
             <a class="cart-link" href="cart.html">
                 <i class="fa-solid fa-cart-shopping"></i>
-                Cart <span class="cart-count">0</span>
+                 <span class="cart-count">0</span>
             </a>
         </nav>
     </div>
@@ -134,7 +140,7 @@
 </div>
 <div>
     <label for="eventEmail">Email address</label>
-    <input id="eventEmail" name="email" type="email" required>
+    <input id="eventEmail" name="email" type="email" placeholder="Enter your Email" required>
 </div>
 <div>
     <label for="eventSelect">Workshop</label>
@@ -151,11 +157,9 @@
 </div>
 
 <button class="btn btn-primary" type="submit">
-    <i class="fa-solid fa-paper-plane"></i>
+    <!-- <i class="fa-solid fa-paper-plane"></i> -->
      Submit Registration</button>
-     <p class="form-note">Demo mode: replace the EmailJS public key, service ID and template ID in <code>
-        js/app.js</code>
-         before live submission.</p>
+     
 
 </form>
 </section>
@@ -173,17 +177,17 @@
             </a>
             <p>Specialty coffee, practical equipment and community-led workshops.</p>
         </div>
-        <div>
-            <h4>Explore</h4>
-            <a href="coffee.html">Coffee Selection</a>
-            <a href="equipment.html">Brewing Equipment</a>
-            <a href="events.html">Events</a>
-        </div>
-        <div>
-            <h4>Help</h4>
-            <a href="offers.html">Offers & Subscriptions</a>
-            <a href="cart.html">Shopping Cart</a>
-        </div>
+         <div class="footer-link">
+        <h4>Explore</h4>
+        <a href="coffee.html">Coffee Selection</a>
+        <a href="equipment.html">Brewing Equipment</a>
+        <a href="events.html">Events</a>
+    </div>
+    <div footer-link>
+        <h4>Help</h4>
+        <a href="offers.html">Offers & Subscriptions</a>
+        <a href="cart.html">Shopping Cart</a>
+    </div>
         <div>
             <h4>Follow</h4>
             <div class="socials">
